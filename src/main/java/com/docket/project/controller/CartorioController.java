@@ -24,9 +24,6 @@ public class CartorioController {
         dao.findAll().forEach(cartorio -> {
             cartorios.add(cartorio);
         });
-        cartorios.forEach(cartorio -> {
-            System.out.println(cartorio.getNome());
-        });
         mv.addObject("list",cartorios);
         return mv;
     }
@@ -36,10 +33,22 @@ public class CartorioController {
         return "formCartorio.jsp";
     }
 
+    @RequestMapping("/procurarCartorio")
+    public String toProcurarCartorio() { return "searchCartorio.jsp"; }
+
+    @RequestMapping("/deletarCartorio")
+    public String toDeletarCartorio() { return "deletarCartorio.jsp"; }
+
     @RequestMapping("/addCartorio")
     public String addCartorio(Cartorio cartorio) {
         dao.save(cartorio);
         return "formCartorio.jsp";
+    }
+
+    @RequestMapping("/deleteCartorio")
+    public String deleteCartorio(Cartorio cartorio) {
+        dao.delete(cartorio);
+        return "/";
     }
 
     @RequestMapping("/getCartorio")

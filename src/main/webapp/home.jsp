@@ -14,9 +14,16 @@
 </div>
 
 <div>
-    <h3>Acoes</h3>
     <form action="formCartorio">
-    <input type="submit" placeholder="Acoes">
+    <input type="submit" value="Adicionar/Editar">
+    </form>
+
+    <form action="procurarCartorio">
+        <input type="submit" value="Procurar">
+    </form>
+
+    <form action="deletarCartorio">
+        <input type="submit" value="Deletar">
     </form>
 </div>
 

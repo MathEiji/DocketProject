@@ -1,9 +1,10 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <title>Cartorio System</title>
 </head>
 <body>
@@ -13,10 +14,9 @@
 </div>
 
 <div>
-    <h3>Adicionar/Editar Cartorios</h3>
-    <form action="addCartorio">
-        <input type="text" name="id"><br>
-        <input type="text" name="nome"><br>
+    <h3>Procurar Cartorio</h3>
+    <form action="deleteCartorio">
+        <input type="text" name="id">
         <input type="submit"><br>
     </form>
 </div>
