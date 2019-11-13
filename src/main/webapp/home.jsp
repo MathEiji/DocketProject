@@ -22,9 +22,6 @@
         <input type="submit" value="Procurar">
     </form>
 
-    <form action="deletarCartorio">
-        <input type="submit" value="Deletar">
-    </form>
 </div>
 
 <div>
@@ -34,6 +31,8 @@
             <tr>
                 <th>Id</th>
                 <th>Nome</th>
+                <th>Editar</th>
+                <th>Deletar</th>
             </tr>
         </thead>
         <tbody>
@@ -42,6 +41,16 @@
                     <tr>
                         <td><c:out value="${cartorio.getId()}"/></td>
                         <td><c:out value="${cartorio.getNome()}"/></td>
+                        <td>
+                            <form action="">
+                                <input type="submit" value="Editar">
+                            </form>
+                        </td>
+                        <td>
+                            <form action="deleteCartorio=${cartorio.getId()}">
+                                <input type="submit" value="Deletar">
+                            </form>
+                        </td>
                     </tr>
                 </c:forEach>
             </c:if>

@@ -8,9 +8,11 @@ import javax.persistence.Id;
 @Entity
 public class Cartorio {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     private String nome;
+
+    public Cartorio() { }
 
     public int getId() { return id; }
     public String getNome() { return nome; }

@@ -22,7 +22,7 @@
 <div>
     <h3>Procurar Cartorio</h3>
     <form action="getCartorio">
-        <input type="text" name="id">
+        <input type="text" name="nome">
         <input type="submit"><br>
     </form>
 </div>

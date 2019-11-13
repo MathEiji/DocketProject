@@ -21,10 +21,12 @@
 
 <div>
     <c:choose>
-        <c:when test="not empty cartorio">
-            <h3>Cartorio encontrado:</h3>
-            <div>Id: ${cartorio.id}</div>
-            <div>${cartorio.nome}</div>
+        <c:when test="${not empty list}">
+            <c:forEach var="cartorio" items="${list}">
+                <h3>Cartorio encontrado:</h3>
+                <div><c:out value="${cartorio.getId()}"/></div>
+                <div><c:out value="${cartorio.getNome()}"/></div>
+            </c:forEach>
         </c:when>
         <c:otherwise>
             <h3>Nenhum cartorio foi encontrado.</h3>
