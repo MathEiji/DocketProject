@@ -20,12 +20,15 @@
 </div>
 
 <div>
+    <h3>Cartorio encontrado:</h3>
+</div>
+
+<div>
     <c:choose>
         <c:when test="${not empty list}">
             <c:forEach var="cartorio" items="${list}">
-                <h3>Cartorio encontrado:</h3>
-                <div><c:out value="${cartorio.getId()}"/></div>
-                <div><c:out value="${cartorio.getNome()}"/></div>
+                <div>ID: <c:out value="${cartorio.getId()}"/></div>
+                <div>Nome: <c:out value="${cartorio.getNome()}"/></div>
             </c:forEach>
         </c:when>
         <c:otherwise>

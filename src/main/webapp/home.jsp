@@ -42,7 +42,7 @@
                         <td><c:out value="${cartorio.getId()}"/></td>
                         <td><c:out value="${cartorio.getNome()}"/></td>
                         <td>
-                            <form action="">
+                            <form action="formCartorio">
                                 <input type="submit" value="Editar">
                             </form>
                         </td>

@@ -37,7 +37,7 @@ public class CartorioController {
     @RequestMapping("/addCartorio")
     public String addCartorio(Cartorio cartorio) {
         dao.save(cartorio);
-        return "formCartorio.jsp";
+        return "/";
     }
 
     @RequestMapping("/deleteCartorio={id}")
