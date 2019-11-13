@@ -15,7 +15,7 @@
 
 <div>
     <form action="formCartorio">
-    <input type="submit" value="Adicionar/Editar">
+    <input type="submit" value="Cadastrar">
     </form>
 
     <form action="procurarCartorio">

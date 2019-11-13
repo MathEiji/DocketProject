@@ -19,9 +19,8 @@
 </div>
 
 <div>
-    <h3>Adicionar/Editar Cartorios</h3>
+    <h3>Cadastrar Cartorios</h3>
     <form action="addCartorio">
-        <span>ID: <input type="text" name="id"></span><br>
         <span>Nome: <input type="text" name="nome"></span><br>
         <div><input type="submit"></div>
     </form>

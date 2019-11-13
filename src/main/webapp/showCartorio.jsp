@@ -20,7 +20,7 @@
 </div>
 
 <div>
-    <h3>Cartorio encontrado:</h3>
+    <h3>Cartorios encontrados:</h3>
 </div>
 
 <div>
