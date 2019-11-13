@@ -14,6 +14,12 @@
 </div>
 
 <div>
+    <form action="/">
+        <input type="submit" value="Voltar">
+    </form>
+</div>
+
+<div>
     <h3>Procurar Cartorio</h3>
     <form action="getCartorio">
         <input type="text" name="id">

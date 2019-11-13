@@ -13,11 +13,17 @@
 </div>
 
 <div>
+    <form action="/">
+        <input type="submit" value="Voltar">
+    </form>
+</div>
+
+<div>
     <h3>Adicionar/Editar Cartorios</h3>
     <form action="addCartorio">
-        <input type="text" name="id"><br>
-        <input type="text" name="nome"><br>
-        <input type="submit"><br>
+        <span>ID: <input type="text" name="id"></span><br>
+        <span>Nome: <input type="text" name="nome"></span><br>
+        <div><input type="submit"></div>
     </form>
 </div>
 

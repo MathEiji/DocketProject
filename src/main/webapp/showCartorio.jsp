@@ -14,6 +14,12 @@
 </div>
 
 <div>
+    <form action="/">
+        <input type="submit" value="Voltar">
+    </form>
+</div>
+
+<div>
     <c:choose>
         <c:when test="not empty cartorio">
             <h3>Cartorio encontrado:</h3>
