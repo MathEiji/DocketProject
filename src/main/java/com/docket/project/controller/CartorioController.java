@@ -16,15 +16,15 @@ public class CartorioController {
     IDAOCartorio dao;
 
     @RequestMapping(value = "/cartorios", method = RequestMethod.GET)
-        public List<Cartorio> getCartorios() {
-            return new ArrayList<>(dao.findAll());
-        }
+    public List<Cartorio> getCartorios() {
+        return new ArrayList<>(dao.findAll());
+    }
 
-        @RequestMapping("/")
-        public ModelAndView home() {
-            ModelAndView mv = new ModelAndView("home.jsp");
-            List<Cartorio> cartorios = new ArrayList<>(dao.findAll());
-            mv.addObject("list",cartorios);
+    @RequestMapping("/")
+    public ModelAndView home() {
+        ModelAndView mv = new ModelAndView("home.jsp");
+        List<Cartorio> cartorios = new ArrayList<>(dao.findAll());
+        mv.addObject("list",cartorios);
         return mv;
     }
 
