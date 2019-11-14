@@ -28,7 +28,7 @@
         <c:when test="${not empty list}">
             <c:forEach var="cartorio" items="${list}">
                 <div>ID: <c:out value="${cartorio.getId()}"/></div>
-                <div>Nome: <c:out value="${cartorio.getNome()}"/></div>
+                <div>Nome: <c:out value="${cartorio.getNome()}"/></div><br>
             </c:forEach>
         </c:when>
         <c:otherwise>

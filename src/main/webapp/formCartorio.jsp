@@ -22,7 +22,7 @@
 <div>
     <form action="addCartorio">
         <c:choose>
-            <c:when test="${empty ca}">
+            <c:when test="${ca.getId() == null}">
                 <h3>Cadastrar Cartorios</h3>
                 <span>Nome: <input type="text" name="nome"></span>
             </c:when>
@@ -32,7 +32,6 @@
                 <span>Nome: <input type="text" name="nome" value="${ca.getNome()}"></span>
             </c:otherwise>
         </c:choose>
-
         <div><input type="submit"></div>
     </form>
 </div>
