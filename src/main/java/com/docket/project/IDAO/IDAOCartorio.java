@@ -1,11 +1,11 @@
-package com.docket.project.dao;
+package com.docket.project.IDAO;
 
 import com.docket.project.model.Cartorio;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface CartorioDAO extends CrudRepository<Cartorio, Integer> {
+public interface IDAOCartorio extends CrudRepository<Cartorio, Integer> {
 
     List<Cartorio> findAll();
 

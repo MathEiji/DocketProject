@@ -11,6 +11,9 @@
             width: 80%;
             display: grid;
             margin: auto;
+            padding-bottom: 2%;
+            background-color: lightgray;
+            border-radius: 20px;
         }
         .system-name {
             margin: auto;

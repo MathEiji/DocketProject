@@ -1,10 +1,8 @@
 package com.docket.project.controller;
 
-import com.docket.project.dao.CartorioDAO;
+import com.docket.project.IDAO.IDAOCartorio;
 import com.docket.project.model.Cartorio;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -15,7 +13,7 @@ import java.util.List;
 public class CartorioController {
 
     @Autowired
-    CartorioDAO dao;
+    IDAOCartorio dao;
 
     @RequestMapping(value = "/cartorios", method = RequestMethod.GET)
     public List<Cartorio> getCartorios() {
