@@ -6,35 +6,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Cartorio System</title>
+    <style>
+        .container {
+            width: 80%;
+            display: grid;
+            margin: auto;
+        }
+        .system-name {
+            margin: auto;
+            text-align: center;
+        }
+        .system-buttons {
+            margin: 2% auto 2% auto;
+            display: inline-block;
+        }
+        .form-cartorio {
+            margin: auto;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<div>
-    <h1>Cartorio System</h1>
-    <h3>by Matheus Eiji</h3>
-</div>
+<div class="container">
+    <div class="system-name">
+        <h1>Cartorio System</h1>
+        <h3>by Matheus Eiji</h3>
+    </div>
 
-<div>
-    <form action="/">
-        <input type="submit" value="Voltar">
-    </form>
-</div>
+    <div class="system-buttons">
+        <form action="/">
+            <input type="submit" value="Voltar">
+        </form>
+    </div>
 
-<div>
-    <h3>Cartorios encontrados:</h3>
-</div>
+    <div class="form-cartorio">
+        <h3>Cartorios encontrados:</h3>
+        <div>
+            <c:choose>
+                <c:when test="${not empty list}">
+                    <c:forEach var="cartorio" items="${list}">
+                        <div>ID: <c:out value="${cartorio.getId()}"/></div>
+                        <div>Nome: <c:out value="${cartorio.getNome()}"/></div><br>
+                    </c:forEach>
+                </c:when>
+                <c:otherwise>
+                    <h3>Nenhum cartorio foi encontrado.</h3>
+                </c:otherwise>
+            </c:choose>
+        </div>
+    </div>
 
-<div>
-    <c:choose>
-        <c:when test="${not empty list}">
-            <c:forEach var="cartorio" items="${list}">
-                <div>ID: <c:out value="${cartorio.getId()}"/></div>
-                <div>Nome: <c:out value="${cartorio.getNome()}"/></div><br>
-            </c:forEach>
-        </c:when>
-        <c:otherwise>
-            <h3>Nenhum cartorio foi encontrado.</h3>
-        </c:otherwise>
-    </c:choose>
 </div>
 
 </body>
