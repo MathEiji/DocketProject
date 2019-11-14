@@ -14,8 +14,8 @@
 </div>
 
 <div>
-    <form action="formCartorio">
-    <input type="submit" value="Cadastrar">
+    <form action="editCartorio=${null}">
+        <input type="submit" value="Cadastrar">
     </form>
 
     <form action="procurarCartorio">
@@ -42,7 +42,7 @@
                         <td><c:out value="${cartorio.getId()}"/></td>
                         <td><c:out value="${cartorio.getNome()}"/></td>
                         <td>
-                            <form action="formCartorio">
+                            <form action="edit=${cartorio.getId()}">
                                 <input type="submit" value="Editar">
                             </form>
                         </td>

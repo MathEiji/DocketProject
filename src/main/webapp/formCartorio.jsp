@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -19,9 +20,19 @@
 </div>
 
 <div>
-    <h3>Cadastrar Cartorios</h3>
     <form action="addCartorio">
-        <span>Nome: <input type="text" name="nome"></span><br>
+        <c:choose>
+            <c:when test="${empty ca}">
+                <h3>Cadastrar Cartorios</h3>
+                <span>Nome: <input type="text" name="nome"></span>
+            </c:when>
+            <c:otherwise>
+                <h3>Editar Cartorio</h3>
+                <input type="text" name="id" value="${ca.getId()}" hidden>
+                <span>Nome: <input type="text" name="nome" value="${ca.getNome()}"></span>
+            </c:otherwise>
+        </c:choose>
+
         <div><input type="submit"></div>
     </form>
 </div>

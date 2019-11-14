@@ -4,6 +4,7 @@ import com.docket.project.dao.CartorioDAO;
 import com.docket.project.model.Cartorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,7 +27,7 @@ public class CartorioController {
         return mv;
     }
 
-    @RequestMapping("/formCartorio")
+    @RequestMapping("/adicionarCartorio")
     public String toForm() {
         return "formCartorio.jsp";
     }
@@ -38,6 +39,17 @@ public class CartorioController {
     public String addCartorio(Cartorio cartorio) {
         dao.save(cartorio);
         return "/";
+    }
+
+    @RequestMapping("/editCartorio={id}")
+    public ModelAndView editCartorio(@PathVariable Integer id) {
+        ModelAndView mv = new ModelAndView("formCartorio.jsp");
+        Cartorio cartorio = new Cartorio();
+        if (id != null) {
+            cartorio = dao.findById(id).orElse(new Cartorio());
+        }
+        mv.addObject("ca", cartorio);
+        return mv;
     }
 
     @RequestMapping("/deleteCartorio={id}")
