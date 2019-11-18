@@ -5,15 +5,19 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "CARTORIO")
+@Table(name = "CARTORIO", uniqueConstraints = {
+        @UniqueConstraint(columnNames = "ID"),
+        @UniqueConstraint(columnNames = "NOME")
+})
 public class Cartorio {
 
     @Id
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")
+    @Column(name = "ID", unique = true, nullable = false)
     private Integer id;
 
-    @Column(name = "NOME")
+    @Column(name = "NOME", unique = true, nullable = false)
     private String nome;
 
     public Cartorio() { }
